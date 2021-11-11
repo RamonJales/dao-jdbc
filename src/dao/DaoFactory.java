@@ -1,11 +1,11 @@
 package dao;
 
+import dao.impl.EmployeeDaoJDBC;
 import db.DB;
-import entities.Employee;
 
 public class DaoFactory {
 	
-	public static Employee createEmployeeDao() {
+	public static EmployeeDao createEmployeeDao() {
 		return new EmployeeDaoJDBC(DB.getConnection());
 	}
 }
