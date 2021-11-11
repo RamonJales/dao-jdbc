@@ -1,6 +1,8 @@
 package entities;
 
 import java.sql.Date;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
 
 public class Employee {
 	
@@ -8,7 +10,7 @@ public class Employee {
 	private String name;
 	private Double salary;
 	private Date birthDate;
-	
+		
 	public Employee() {}
 	
 	public Employee(Integer id, String name, Double salary, Date birthDate) {
@@ -52,7 +54,10 @@ public class Employee {
 
 	@Override
 	public String toString() {
-		return "Employee [id = " + id + ", name = " + name + ", salary = " + salary + ", birthDate = " + birthDate + "]";
+		
+		DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM);
+		
+		return "Employee [id = " + id + ", name = " + name + ", salary = " + salary + ", birthDate = " + formatter.format(birthDate.toLocalDate()) + "]";
 	}
 	
 	
