@@ -55,7 +55,7 @@ public class Employee {
 	@Override
 	public String toString() {
 		
-		DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM);
+		DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT);
 		
 		return "Employee [id = " + id + ", name = " + name + ", salary = " + salary + ", birthDate = " + formatter.format(birthDate.toLocalDate()) + "]";
 	}
