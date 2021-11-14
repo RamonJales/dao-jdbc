@@ -49,6 +49,8 @@ public class Tests {
 		
 		dao.update(obj2);
 		
+		System.out.println("Update executed!");
+		
 		System.out.println();
 		
 		System.out.println("========DeleteById-test!========");

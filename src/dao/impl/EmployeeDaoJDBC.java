@@ -71,7 +71,7 @@ public class EmployeeDaoJDBC implements EmployeeDao{
 		
 		try {
 			st = conn.prepareStatement("UPDATE employee "
-					+ "(SET Name=?, Salary=?, BirthDate=? "
+					+ "SET Name=?, Salary=?, BirthDate=? "
 					+ "WHERE Id=?");
 			
 			st.setString(1, obj.getName());
